@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TO-DO LIST</title>
+    <link rel="stylesheet" href="/styles/mylist.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee+Shade&family=Caveat+Brush&family=Concert+One&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="total">
+        <div class="box1">
+            <div class="today">
+                <p id="day"><%= day %></p>
+                <p id="date"><%= date %></p>
+                <p id="month"><%= month %></p>
+            </div>
+            <div class="quote">
+               <p>"Small deeds done are better than great deeds planned." </p> 
+               <p>- Peter Marshall</p>
+            </div>
+        </div>
+        <div class = "box2">
+            <form class="input" action="/addTask" method="POST">
+                <input type="text" name="task" id="taskInput" placeholder="Write your task here...." autofocus/>
+                <button class="add">+</button>
+            </form>
+            <div class="task">
+                TO-DO LIST
+                <ul>
+                    <% tasks.forEach((task,index) => { %>
+                        <li class="task-item">
+                            <form action = "/toggleTask/<%= index %>" method="POST" style="display:inline">
+                                <input type="checkbox" name="checked" value="true" <%= task.checked ? "checked" : "" %> onchange="this.form.submit()">
+                                <label for="task-<%= index%>"> <%= task.text %> </label>
+                            </form>
+                            
+                            <form name="button" action="/delete/<%= index %>" method="POST" style = "display : inline ">
+                                <button type="submit">x</button>
+                            </form>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+*{
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+}
+
+body{
+    background-color: #b8adce;
+}
+p{
+    margin: 10px;
+}
+
+.total{
+    display:flex;
+    width: 100%; 
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.quote{
+    text-align: center;
+    font-size: 25px;
+    background-color: #dec5db;
+    border : 3px solid #F5E4EA;
+    border-radius: 20px;
+    margin-left: 150px;
+    height : 250px;
+    width : 200px;
+    padding : 10px;
+}
+
+.today{
+    text-align: center;
+    display: inline-block;
+    background-color: #dec5db;
+    border : 3px solid #F5E4EA;
+    border-radius: 20px;
+    padding : 10px 50px 10px 50px;
+    margin : 50px 50px 50px 150px;
+    font-size: 35px;
+    height : 210px
+}
+
+#date{
+    background-color: #F5E4EA;
+    border-radius: 50%;
+    padding : 20px;
+}
+
+.box2{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.input{
+    display : flex;
+}
+
+#taskInput{
+    background-color: #dec5db;
+    border : 3px solid #F5E4EA;
+    border-radius: 20px;
+    padding : 10px 20px 10px 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    height: 30px;
+    width: 600px;
+    
+}
+
+
+.add{
+    background-color: #dec5db;
+    border : 3px solid #F5E4EA;
+    border-radius: 10px;
+    padding : 2px 5px 2px 5px;
+    margin: 50px 10px 10px 10px;
+    font-size: 40px;
+    height: 55px;
+    
+}
+
+.task{
+    background-color: #dec5db;
+    border : 20px dotted #F5E4EA;
+    border-radius: 30px;
+    margin-top: 20px ;
+    padding : 10px;
+    height: 450px;
+    font-size: 30px;
+    
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+ul{
+    list-style-type:none;
+    padding: 5px;
+    margin : 5px;
+}
+
+
+input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+    color : grey;
+    display : inline;
+}
+
+button[type="submit"]{
+    background-color: #F5E4EA;
+    padding : 3px 5px; 
+    border : 1px solid black;
+    border-radius: 3px;
+    width : 25px
+}
+
+form[name="button"]{
+    margin-left: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px 0px;
+
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    background-color: #F5E4EA;
+    padding : 0px 0px 0px 3px;
+    margin-right: 20px; 
+    border : 1px solid black;
+    border-radius: 3px;
+    width : 20px;
+    height : 20px
+}
+
+input[type="checkbox"]:checked{
+    background-color:#F5E4EA ;
+}
+
+input[type="checkbox"]:checked::after{
+    content :'✔';
+    position:absolute;
+    font-size: 14px;
+    color: black;
+}
+
